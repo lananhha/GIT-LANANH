@@ -1,0 +1,83 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color:#dbdbdb;
+    --navbar-height: 36px;
+    --header-heigth: 120px;
+    --header-with-search-height: calc(var(--header-heigth) - var(--navbar-height));
+    --header-sort-bar-height: 46px;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;;
+}
+
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes FadeInfromtop {
+    from {
+        top: calc(var(--header-heigth) / 2);
+        opacity: 0;
+    }
+
+    to{
+        top: var(--header-heigth);
+        opacity: 1;
+    }
+}
+
+@keyframes NotifyGrowup {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.btn{
+    border: none;
+    margin: 0 8px;
+    padding: 6px 25px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.btn--gray{
+    background-color: #f9f9f9;
+    color: #555;
+}
+
+.btn--primary{
+    background-color: #ee4d2d;
+    color: #fff;
+}
+
+@keyframes Growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+
+    to {
+        transform: scale(var(--growth-to));
+    }
+}
